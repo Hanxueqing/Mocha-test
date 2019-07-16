@@ -1,0 +1,38 @@
+    <section class="suite">
+      <h1>Demo</h1>
+      <dl>
+        <dt>&#x5355;&#x4EF7;10&#x5757;&#x94B1;&#x7684;3&#x4EF6;&#x5546;&#x54C1;&#x5C0F;&#x8BA1;&#x91D1;&#x989D;&#x5E94;&#x8BE5;&#x662F;30&#x5757;</dt>
+        <dd><pre><code>var subtotal = demo.subtotal(10,3);
+expect(subtotal).to.equal(30);</code></pre></dd>
+        <dt>&#x52A0;&#x8F7D;&#x8C46;&#x74E3;api&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E94;&#x8BE5;&#x5305;&#x542B;subjects&#x5C5E;&#x6027;</dt>
+        <dd><pre><code>demo.fetchData(&#x22;top250&#x22;,function(data){
+    expect(data).to.have.property(&#x22;subjects&#x22;);
+    done();
+})</code></pre></dd>
+        <dt>&#x52A0;&#x8F7D;&#x8C46;&#x74E3;api&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;subjects&#x5E94;&#x4E3A;&#x6570;&#x7EC4;&#x7C7B;&#x578B;</dt>
+        <dd><pre><code>demo.fetchData(&#x22;top250&#x22;, function (data) {
+    var subjects = data.subjects;
+    expect(subjects).to.be.a(&#x22;array&#x22;);
+    done();
+})</code></pre></dd>
+        <dt>&#x52A0;&#x8F7D;&#x8C46;&#x74E3;api&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;subjects&#x957F;&#x5EA6;&#x5E94;&#x4E3A;20</dt>
+        <dd><pre><code>demo.fetchData(&#x22;top250&#x22;, function (data) {
+    var subjects = data.subjects;
+    expect(subjects).to.have.length(20);
+    done();
+})</code></pre></dd>
+        <dt>&#x52A0;&#x8F7D;&#x8C46;&#x74E3;api&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;title&#x5C5E;&#x6027;&#x5E94;&#x8BE5;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;</dt>
+        <dd><pre><code>demo.fetchData(&#x22;top250&#x22;, function (data) {
+    var title = data.subjects[0].title
+    expect(title).to.be.a(&#x22;string&#x22;);
+    expect(title).to.equal(&#x22;&#x8096;&#x7533;&#x514B;&#x7684;&#x6551;&#x8D4E;&#x22;)
+    done();
+})</code></pre></dd>
+        <dt>&#x7ED9;&#x6C7D;&#x8F66;&#x5F15;&#x64CE;&#x52A0;&#x6C34;&#x662F;&#x4E0D;&#x80FD;&#x63A5;&#x53D7;&#x7684;&#x4E8B;&#x60C5;</dt>
+        <dd><pre><code>expect(function(){
+    demo.engine(&#x22;water&#x22;);
+}).to.throw(&#x22;not accept&#x22;)</code></pre></dd>
+        <dt>&#x7ED9;&#x6C7D;&#x8F66;&#x5F15;&#x64CE;&#x52A0;&#x6C34;&#x662F;&#x4E0D;&#x80FD;&#x63A5;&#x53D7;&#x7684;&#x4E8B;&#x60C5;</dt>
+        <dd><pre><code>expect(demo.engine.bind(demo,&#x22;water&#x22;)).to.throw(&#x22;not accept&#x22;)</code></pre></dd>
+      </dl>
+    </section>
