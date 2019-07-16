@@ -890,14 +890,4 @@ https://cn.vuejs.org/v2/guide/unit-testing.html#ad
 
 
 
-测试项目已上传github
-
-地址：https://github.com/Hanxueqing/Mocha-test
-
-运行克隆命令，下载到本地
-
-```
-git clone git@github.com:Hanxueqing/Mocha-test.git
-
-```
 
