@@ -20,7 +20,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "mochawesome": "^4.0.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
